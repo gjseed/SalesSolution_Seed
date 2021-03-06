@@ -39,25 +39,26 @@ namespace PresentationProject
             this.label2 = new System.Windows.Forms.Label();
             this.custLnamebx = new System.Windows.Forms.TextBox();
             this.cityBx = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.countryBx = new System.Windows.Forms.TextBox();
+            this.phoneBx = new System.Windows.Forms.TextBox();
             this.upDCust = new System.Windows.Forms.Button();
             this.DltCust = new System.Windows.Forms.Button();
             this.NewCust = new System.Windows.Forms.Button();
             this.LnameFilter = new System.Windows.Forms.CheckBox();
             this.CFilter = new System.Windows.Forms.CheckBox();
+            this.lstnmbx = new System.Windows.Forms.TextBox();
+            this.Find = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).BeginInit();
             this.SuspendLayout();
             // 
             // LoadCTbl
             // 
-            this.LoadCTbl.Location = new System.Drawing.Point(56, 406);
+            this.LoadCTbl.Location = new System.Drawing.Point(56, 429);
             this.LoadCTbl.Name = "LoadCTbl";
             this.LoadCTbl.Size = new System.Drawing.Size(144, 23);
             this.LoadCTbl.TabIndex = 0;
             this.LoadCTbl.Text = "Search Customers";
             this.LoadCTbl.UseVisualStyleBackColor = true;
-            this.LoadCTbl.Click += new System.EventHandler(this.LoadCTbl_Click);
             // 
             // grid
             // 
@@ -134,23 +135,23 @@ namespace PresentationProject
             this.cityBx.Size = new System.Drawing.Size(100, 23);
             this.cityBx.TabIndex = 9;
             // 
-            // textBox1
+            // countryBx
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 120);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 10;
+            this.countryBx.Location = new System.Drawing.Point(100, 120);
+            this.countryBx.Name = "countryBx";
+            this.countryBx.Size = new System.Drawing.Size(100, 23);
+            this.countryBx.TabIndex = 10;
             // 
-            // textBox2
+            // phoneBx
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 11;
+            this.phoneBx.Location = new System.Drawing.Point(100, 152);
+            this.phoneBx.Name = "phoneBx";
+            this.phoneBx.Size = new System.Drawing.Size(100, 23);
+            this.phoneBx.TabIndex = 11;
             // 
             // upDCust
             // 
-            this.upDCust.Location = new System.Drawing.Point(56, 369);
+            this.upDCust.Location = new System.Drawing.Point(34, 229);
             this.upDCust.Name = "upDCust";
             this.upDCust.Size = new System.Drawing.Size(144, 23);
             this.upDCust.TabIndex = 12;
@@ -160,7 +161,7 @@ namespace PresentationProject
             // 
             // DltCust
             // 
-            this.DltCust.Location = new System.Drawing.Point(56, 335);
+            this.DltCust.Location = new System.Drawing.Point(162, 330);
             this.DltCust.Name = "DltCust";
             this.DltCust.Size = new System.Drawing.Size(144, 23);
             this.DltCust.TabIndex = 13;
@@ -170,7 +171,7 @@ namespace PresentationProject
             // 
             // NewCust
             // 
-            this.NewCust.Location = new System.Drawing.Point(56, 301);
+            this.NewCust.Location = new System.Drawing.Point(34, 200);
             this.NewCust.Name = "NewCust";
             this.NewCust.Size = new System.Drawing.Size(144, 23);
             this.NewCust.TabIndex = 14;
@@ -200,18 +201,36 @@ namespace PresentationProject
             this.CFilter.UseVisualStyleBackColor = true;
             this.CFilter.CheckedChanged += new System.EventHandler(this.CFilter_CheckedChanged);
             // 
+            // lstnmbx
+            // 
+            this.lstnmbx.Location = new System.Drawing.Point(13, 329);
+            this.lstnmbx.Name = "lstnmbx";
+            this.lstnmbx.Size = new System.Drawing.Size(143, 23);
+            this.lstnmbx.TabIndex = 17;
+            // 
+            // Find
+            // 
+            this.Find.Location = new System.Drawing.Point(43, 358);
+            this.Find.Name = "Find";
+            this.Find.Size = new System.Drawing.Size(75, 23);
+            this.Find.TabIndex = 18;
+            this.Find.Text = "Find";
+            this.Find.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1068, 464);
+            this.Controls.Add(this.Find);
+            this.Controls.Add(this.lstnmbx);
             this.Controls.Add(this.CFilter);
             this.Controls.Add(this.LnameFilter);
             this.Controls.Add(this.NewCust);
             this.Controls.Add(this.DltCust);
             this.Controls.Add(this.upDCust);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.phoneBx);
+            this.Controls.Add(this.countryBx);
             this.Controls.Add(this.cityBx);
             this.Controls.Add(this.custLnamebx);
             this.Controls.Add(this.label2);
@@ -243,13 +262,15 @@ namespace PresentationProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox custLnamebx;
         private System.Windows.Forms.TextBox cityBx;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox countryBx;
+        private System.Windows.Forms.TextBox phoneBx;
         private System.Windows.Forms.Button upDCust;
         private System.Windows.Forms.Button DltCust;
         private System.Windows.Forms.Button NewCust;
         private System.Windows.Forms.CheckBox LnameFilter;
         private System.Windows.Forms.CheckBox CFilter;
+        private System.Windows.Forms.TextBox lstnmbx;
+        private System.Windows.Forms.Button Find;
     }
 }
 
